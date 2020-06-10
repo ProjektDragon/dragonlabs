@@ -10,7 +10,7 @@ module "bootstrap" {
   // Enable providers
   cloudflare_enabled = false
   discord_enabled = false
-  github_enabled = true
+  github_enabled = false
   terraform_cloud_enabled = false
 
   // Required provider secrets
@@ -22,27 +22,6 @@ module "bootstrap" {
   service_name = "terraform-projektdragon-bootstrap"
   service_description = "Bootstrap a GitHub repository and supporting cloud infrastructure."
   service_url = "http://projektdragon.com"
-
-  // Cloudflare DNS settings
-  cloudflare_domain_name = null
-  cloudflare_record_type = null
-  cloudflare_record_name = null
-  cloudflare_record_value = null
-
-  // GitHub settings
-  github_gitignore_template = "Terraform"
-  github_license_template = "mit"
-  github_private_repo	= true
-  github_has_issues = true
-  github_has_projects = false
-  github_has_wiki = false
-  github_has_downloads = false
-
-  // Terraform Cloud
-  tfc_auto_apply = false
-  tfc_file_triggers_enabled = true
-  tfc_remote_execution = true
-  tfc_working_directory = ""
 }
 
 module "dragonlabs" {
@@ -52,7 +31,7 @@ module "dragonlabs" {
   // Enable providers
   cloudflare_enabled = false
   discord_enabled = false
-  github_enabled = true
+  github_enabled = false
   terraform_cloud_enabled = false
 
   // Required provider secrets
@@ -64,27 +43,6 @@ module "dragonlabs" {
   service_name = "dragonlabs"
   service_description = "Adding eggs to the dragon's nest."
   service_url = "http://projektdragon.com"
-
-  // Cloudflare DNS settings
-  cloudflare_domain_name = null
-  cloudflare_record_type = null
-  cloudflare_record_name = null
-  cloudflare_record_value = null
-
-  // GitHub settings
-  github_gitignore_template = "Terraform"
-  github_license_template = "mit"
-  github_private_repo	= true
-  github_has_issues = true
-  github_has_projects = false
-  github_has_wiki = true
-  github_has_downloads = false
-
-  // Terraform Cloud
-  tfc_auto_apply = false
-  tfc_file_triggers_enabled = true
-  tfc_remote_execution = true
-  tfc_working_directory = ""
 }
 
 module "docs" {
