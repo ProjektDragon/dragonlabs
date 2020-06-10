@@ -2,7 +2,7 @@
 // Serves as the template for future uses of the bootstrap template.
 // All assignable variables will be set to null, and reflect a practical
 // example of on how to configure what is found in the repositories README.md
-
+/*
 module "bootstrap" {
   source  = "app.terraform.io/ProjektDragon/bootstrap/projektdragon"
   version = "0.0.3"
@@ -44,6 +44,7 @@ module "dragonlabs" {
   service_description = "Adding eggs to the dragon's nest."
   service_url = "http://projektdragon.com"
 }
+*/
 
 module "docs" {
   source  = "app.terraform.io/ProjektDragon/bootstrap/projektdragon"
