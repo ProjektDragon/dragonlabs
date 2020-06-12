@@ -24,6 +24,17 @@ module "bootstrap" {
 
   // GitHub settings
   github_manual_repo = true
+  github_private_repo	= false
+  github_has_issues = true
+  github_has_projects = false
+  github_has_wiki = false
+  github_has_downloads = false
+
+  // Terraform Cloud
+  tfc_auto_apply = false
+  tfc_file_triggers_enabled = true
+  tfc_remote_execution = true
+  tfc_working_directory = ""
 }
 
 module "dragonlabs" {
@@ -34,7 +45,7 @@ module "dragonlabs" {
   cloudflare_enabled = true
   discord_enabled = false
   github_enabled = true
-  terraform_cloud_enabled = false
+  terraform_cloud_enabled = true
 
   // Required provider secrets
   cloudflare_zone_id = var.cloudflare_zone_id
@@ -48,6 +59,17 @@ module "dragonlabs" {
 
   // GitHub settings
   github_manual_repo = true
+  github_private_repo	= false
+  github_has_issues = true
+  github_has_projects = false
+  github_has_wiki = false
+  github_has_downloads = false
+
+  // Terraform Cloud
+  tfc_auto_apply = false
+  tfc_file_triggers_enabled = true
+  tfc_remote_execution = true
+  tfc_working_directory = ""
 }
 
 module "docs" {
